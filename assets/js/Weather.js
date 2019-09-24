@@ -73,6 +73,8 @@ $(document).ready(function () {
       "m/s</h3>"
     );
   }
+
+
   // function celsiusToFahrenheit(temperature) {
   //   return (temperature * 9 / 5) + 32;
   // }
