@@ -27,7 +27,7 @@ $(document).ready(function () {
           console.log(`successful ajax: ${data}`)
           var info = showResults(data);
 
-          console.log(info)
+          // console.log(info)
 
           $("#showWeather").html(info);
 
