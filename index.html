@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Weather App - JavaScript</title>
-    <link rel="stylesheet" href="font/Rimouski.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-    
-    <div class="container">
-        <div class="app-title">
-            <p>Weather</p>
+  <nav class="navbar navbar-default" id="nav_bar">
+    <div class="container" style="height:95px;">
+      <div class="row">
+        <div class="col-md-12" style="margin-bottom:10px;">
+          <h3 class="text-center">Enter City Name</h3>
+          <span id="error" class="text-center"></span>
         </div>
-        <div class="notification"> </div>
-        <div class="weather-container">
-            <div class="weather-icon">
-                <img src="icons/unknown.png" alt="">
-            </div>
-            <div class="temperature-value">
-                <p>- °<span>C</span></p>
-            </div>
-            <div class="temperature-description">
-                <p> - </p>
-            </div>
-            <div class="location">
-                <p>-</p>
-            </div>
+
+        <div class="row form-group form-inline" id="cityDiv">
+          <input type="text" name="city" id="city" style="width:120px" class="form-control"
+            placeholder="Your city name..." />
+          <button id="submitCity" class="btn btn-primary" class="fa fa-question-circle">Search</button>
+
         </div>
+      </div>
+  </nav>
+
+  <div id="showWeather">
+    <div class="weather-icon">
+      <img id="icon" src="https://media1.giphy.com/media/3ov9jCEFMBtCy54q6Q/giphy.gif" alt="">
     </div>
-    
-    <script src="app.js"></script>
+  </div>
+  <div class="footer" style="text-align: center">
+    <a href="http://www.openweathermap.org" target="_blank"> <button class="btn btn-success">Weather Origin
+        <button></a></<a>
+    <a href="../teamp1/Weekly Forecast/forecast.html" target="_blank"><button class="btn btn-success">Weekly
+        Forcast</button></a>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <script src="assets/js/Weather.js"></script>
 </body>
+
 </html>
-
-

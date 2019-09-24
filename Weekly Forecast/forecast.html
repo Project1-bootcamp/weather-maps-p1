@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App - Forecast</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container" style="height:1350px;">
+        <div class="row">
+            <div class="col-md-12" style="margin-bottom:10px;">
+                <h3 class="text-center"><b>F O R E C A S T</b></h3>
+                <div class="eror">
+                    <span id="error" class="text-center"></span>
+                </div>
+            </div>
+            <div id="header1">
+                <div class="row form-group form-inline" id="cityDiv">
+
+                    <input type="text" name="city" id="city" class="form-control" placeholder="Enter city...">
+                    <input type="text" name="days" id="days" class="form-control" placeholder="Days">
+                    <button id="submitForecast" class="btn btn-primary">Search</button>
+                    <a id="cloc" href="../index.html"><button class="btn btn-success" class="fa fa-location-arrow">
+                            Current
+                            Location</button></a>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
+
+
+        <div id="inside">
+            <div class="row" style="margin-top:30px">
+                <table class="table">
+                    <div id="header" class="text-center"></div>
+
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Icon</th>
+                            <th>Description</th>
+                            <th>Min. Temperature</th>
+                            <th>Max. Temperature</th>
+                            <th>Humidity</th>
+                            <th>Wind Speed</th>
+                            <th>Wind Direction</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="forecastWeather">
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" id="foot">
+        <div id="demo"></div>
+        <div class="container">
+            <div class="row text-center">
+                <p style="color: black">Copyright&copy; SultanK</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="forecast.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+*{
+    margin: auto;
+}
+body{
+    /* Cool backrounds fol later
+    1. https://wallpaperbro.com/img/20442.jpg
+    2. https://wallpaperbro.com/img/20443.jpg  use 4px blur on this to look cool!
+    3. https://wallpaperbro.com/img/20445.jpg
+    4. https://wallpaperbro.com/img/20454.jpg
+    5. https://wallpaperbro.com/img/20456.jpg
+    6. https://wallpaperbro.com/img/20448.jpg
+
+    */
+    background-image: url('https://wallpaperbro.com/img/20579.jpg');
+    background-size: cover;
+   backdrop-filter: blur(4px);
+}
+
+h3{
+    font-family: 'Merienda';font-size: 30pt;
+    width: 400px;
+    padding: 18px;
+    color: black;
+    background-image: url('https://thumbs.gfycat.com/ApprehensiveBlackandwhiteEarwig-size_restricted.gif');
+    background-size: cover;
+    border-radius: 35px;
+    color: rgba(5, 5, 5, 0.692);
+    text-shadow: 2px 2px rgb(140, 140, 211);
+    
+}
+
+#demo{
+    text-align: right;
+    color: white;
+}
+
+
+.footer,
+#foot{
+    background-image: url('https://p7.hiclipart.com/preview/766/790/560/samsung-galaxy-desktop-wallpaper-high-definition-television-display-resolution-blue-background.jpg');
+    background-size: cover;
+    height: 50px;
+    padding: 5px;
+    margin-top: -400px;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(px);
+    border-top: solid 3px whitesmoke;
+
+}
+#inside{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    color: rgba(5, 5, 5, 0.692);
+    text-shadow: 2px 2px rgb(140, 140, 211);
+}
+#header1{
+    margin: auto;
+    
+    padding: 3px;
+}
+#cloc{
+    float: right;
+    /*margin-right: 270px;*/
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    
+}
+.eror{
+    width: 500px;
+    border-radius: 20px;
+}
+
+#city,
+#days,
+#submitForecast{
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clock {
+    font-family: 'Saira Stencil One', cursive;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: aliceblue;
+    text-shadow: 7px 7px 7px black;
+    font-size: 50px;
+    letter-spacing: 7px;
+   
+
+
+}
