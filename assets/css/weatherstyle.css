@@ -1,3 +1,6 @@
+body{
+    background-color:wheat;
+}
 #showWeather{
     margin: auto;
     background-image: url('https://gifspro.com/wp-content/uploads/2018/06/Cumulus-Clouds-Timelapse-8-Near-Sunset.gif');
@@ -10,6 +13,7 @@
     border-radius: 25px;
     text-shadow: 2px 2px rgb(17, 17, 37);
 }
+
 .container{
     margin: 0 auto;
 }
@@ -24,6 +28,25 @@
     width: 400px;
     color: antiquewhite;
 }
-body{
-    background-color:wheat;
+/* this is for the whole weath box style */
+.notification.is-success{
+    background-color: white;
+}
+
+#nav_bar{
+    
+}
+.footer{
+
+}
+.notification.is-danger{
+    background-color: blue;
+}
+
+.navbar-default{
+    color: white;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+    color:white;
 }
