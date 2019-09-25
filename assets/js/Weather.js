@@ -1,24 +1,45 @@
 $(document).ready(function () {
+  var city = ""
   // TODO: Event listener (click.event)
 
   $("#submitCity").click(function () {
     return getWeather();
   });
 
-  function getWeather() {
-    var city = $("#city").val();
+  function getLocation() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(
+          $.get("http://ipinfo.io", function (response) {
+            // console.log(response.city, response.country);
+          }, "jsonp")
+        );
+      }, 2000);
+    });
+  }
+
+
+  async function getWeather() {
+    city = $("#city").val();
     console.log("city val: " + city)
+
     if (city == "") {
-      // todo Get user location.
-      city = "chicago"
+      city = await getLocation()
+      // $.get("http://ipinfo.io", function (response) {
+      //   city = response.city;
+      //   console.log(city)
+      // }, "jsonp");
+      // // todo Get user location.
+      // return city
     }
-    console.log('chicago should be city now: ' + city)
-    if (city != "") {
+
+    console.log('chicago should be city now: ' + city.city)
+    if (city.city != "") {
       console.log(`condidtion met`)
       $.ajax({
         url:
           "http://api.openweathermap.org/data/2.5/weather?q=" +
-          city +
+          city.city +
           "&units=metric" +
           "&APPID=db8ae854ac64cec183d353c35b79a520",
         type: "GET",
@@ -45,6 +66,11 @@ $(document).ready(function () {
 
   function showResults(data) {
     console.log(`data.weather[0]: ${data.weather[0].description}`)
+    var temp = celsiusToFahrenheit(data.main.temp);
+    var temp_min = celsiusToFahrenheit(data.main.temp);
+    var temp_max = celsiusToFahrenheit(data.main.temp);
+    console.log(temp);
+    
     return (
       '<h2 style="font-weight:bold; font-size:30px; padding-top:20px;" class="text-center">Current Weather for ' +
       data.name +
@@ -57,17 +83,17 @@ $(document).ready(function () {
       data.weather[0].description +
       "</h3>" +
       "<h3 style='padding-left:40px;'><strong>Temperature</strong>: " +
-      data.main.temp +
-      " &deg;C</h3>" +
+      temp +
+      " &deg;F</h3>" +
       "<h3 style='padding-left:40px;'><strong>Humidity</strong>: " +
       data.main.humidity +
       "%</h3>" +
       "<h3 style='padding-left:40px;'><strong>Min Temperature</strong>: " +
-      data.main.temp_min +
-      "&deg;C</h3>" +
+      temp_min +
+      "&deg;F</h3>" +
       "<h3 style='padding-left:40px;'><strong>Max Temperature</strong>: " +
-      data.main.temp_max +
-      "&deg;C</h3>" +
+      temp_max +
+      "&deg;F</h3>" +
       "<h3 style='padding-left:40px;'><strong>Wind Speed</strong>: " +
       data.wind.speed +
       "m/s</h3>"
@@ -75,9 +101,11 @@ $(document).ready(function () {
   }
 
 
-  // function celsiusToFahrenheit(temperature) {
-  //   return (temperature * 9 / 5) + 32;
-  // }
+  function celsiusToFahrenheit(temperature) {
+    // console.log(temperature);
+    
+    return (temperature * 9 / 5) + 32;
+  }
 
   // //WHEN THE USER CLICKS ON THE TEMPERATURE ELEMENET
   // temperature.addEventListener("click", function () {
