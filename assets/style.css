@@ -1,100 +1,114 @@
+/* J.V  */
+/* css 2 s.k & w.t*/
+.notification.is-danger{
+    background-color: cornflowerblue;
+}
+
+.navbar-default{
+    color: white;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+    color:white;
+}
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
-#map {
-      position: fixed;
-      left:3%; 
-       height: 500px;
-       width: 60%;
-       border-radius: 20px;
-        }
+ #map {
+    position: fixed;
+    left:3%; 
+     height: 500px;
+     width: 60%;
+     border-radius: 20px;
+      }
 
-        /* Optional: Makes the sample page fill the window. */
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background: rgb(44, 43, 43);
-        }
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      /* body {
+          height: 100%;
+          margin: 0;
+          padding: 0; */
+          /* background: rgb(44, 43, 43); */
+      /* } */
 
-        #description {
-            font-family: Roboto;
-            font-size: 15px;
-            font-weight: 300;
-        }
+      #description {
+          font-family: Roboto;
+          font-size: 15px;
+          font-weight: 300;
+      }
 
-        #infowindow-content .title {
-            font-weight: bold;
-        }
+      #infowindow-content .title {
+          font-weight: bold;
+      }
 
-        #infowindow-content {
-            display: none;
-        }
+      #infowindow-content {
+          display: none;
+      }
 
-        #map #infowindow-content {
-            display: inline;
-        }
+      #map #infowindow-content {
+          display: inline;
+      }
+      #location {
+          text-align: left;
+          margin: 10px 10px 0 0;
+          border-radius: 2px 0 0 2px;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          outline: none;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+          background-color: #fff;
+          font-family: Roboto;
+          width: 200px;
+      }
 
-        #location {
-            margin: 10px 10px 0 0;
-            border-radius: 2px 0 0 2px;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            outline: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            background-color: #fff;
-            font-family: Roboto;
-            width: 200px;
-        }
+      #pac-container {
+          padding-bottom: 12px;
+          margin-right: 12px;
+      }
 
-        #pac-container {
-            padding-bottom: 12px;
-            margin-right: 12px;
-        }
+      .pac-controls {
+          display: inline-block;
+          padding: 5px 11px;
+      }
 
-        .pac-controls {
-            display: inline-block;
-            padding: 5px 11px;
-        }
+      .pac-controls label {
+          font-family: Roboto;
+          font-size: 13px;
+          font-weight: 300;
+      }
 
-        .pac-controls label {
-            font-family: Roboto;
-            font-size: 13px;
-            font-weight: 300;
-        }
+      #pac-input {
+          background-color: #fff;
+          font-family: Roboto;
+          font-size: 15px;
+          font-weight: 300;
+          margin-left: 12px;
+          padding: 0 11px 0 13px;
+          text-overflow: ellipsis;
+          width: 400px;
+      }
 
-        #pac-input {
-            background-color: #fff;
-            font-family: Roboto;
-            font-size: 15px;
-            font-weight: 300;
-            margin-left: 12px;
-            padding: 0 11px 0 13px;
-            text-overflow: ellipsis;
-            width: 400px;
-        }
+      #pac-input:focus {
+          border-color: #4d90fe;
+      }
 
-        #pac-input:focus {
-            border-color: #4d90fe;
-        }
+      #title {
+          color: #fff;
+          background-color: #4d90fe;
+          font-size: 25px;
+          font-weight: 500;
+          padding: 6px 12px;
+      }
 
-        #title {
-            color: #fff;
-            background-color: #4d90fe;
-            font-size: 25px;
-            font-weight: 500;
-            padding: 6px 12px;
-        }
+      #target {
+          width: 345px;
+      }
 
-        #target {
-            width: 345px;
-        }
-
-        #currentLocation{
-          position: relative;
-          left:20%;
-          bottom: 5%;
-        }
+      #currentLocation{
+          text-align: center;
+        /* position: relative;
+        left:20%;
+        bottom: 5%; */
+      }
 
 
 #right-panel {
@@ -118,48 +132,48 @@ width: 100%;
 font-size: 12px;
 }
 #right-panel {
-    height: 500px;
-    /* float: right; */
-    /* width: 350px; */
-    overflow: auto;
-    background: lightgray;
-    border-radius: 20px;
-    /* position: relative; */
-    /* bottom: 75%; */
-    /* right:2%; */
+  height: 500px;
+  /* float: right; */
+  /* width: 350px; */
+  overflow: auto;
+  background: lightgray;
+  border-radius: 20px;
+  /* position: relative; */
+  /* bottom: 75%; */
+  /* right:2%; */
 }
 
 @media print {
-  #map {
-    height: 500px;
-    margin: 0;
-  }
-  #right-panel {
-    /* float: none; */
-    /* width: auto; */
-  }
+#map {
+  height: 500px;
+  margin: 0;
+}
+#right-panel {
+  /* float: none; */
+  /* width: auto; */
+}
 }
 
 #nearestFound{
-  /* position: relative; */
-  /* margin: 0 30%; */
-  width: 70%;
-  margin: auto;
-  color: ghostwhite;
+/* position: relative; */
+/* margin: 0 30%; */
+width: 70%;
+margin: auto;
+color: ghostwhite;
 }
 
 #userSearch{
-  position: relative;
-  left: 35%;
-  top: 49px;
-  z-index: 1;
-}
+    position: relative;
+    left: 37%;
+    top: 49px;
+    z-index: 1;
+  }
 
 .flex-stuff{
-  display: flex;
+display: flex;
 }
 
 .flex-stuff2{
-  display: flex;
-  /* margin-left:300px */
+display: flex;
+/* margin-left:300px */
 }
