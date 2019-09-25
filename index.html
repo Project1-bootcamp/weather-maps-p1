@@ -1,130 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- <meta charset="UTF-8" />
+  <title>Weather App</title> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" /> -->
+    <!-- </head>
+<body>
+</body> -->
+    <!-- split here -->
+    <!-- </html> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-    <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Project-1</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/mainstyle.css" />
+    <link rel="stylesheet" href="assets/css/weatherstyle.css" />
 </head>
-
 <body>
-<section class="hero is-primary is-medium">
+    <section class="hero is-primary is-medium">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
         </div>
-      
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
-          <div class="container has-text-centered">
-            <h1 class="title">
-              Group project
-            </h1>
-            <h2 class="subtitle">
-              optional text
-            </h2>
-          </div>
+            <div class="container has-text-centered">
+                <h1 class="title">
+                   WeatherMaps Vision
+                </h1>
+                <h2 class="subtitle">
+                   company
+                </h2>
+            </div>
         </div>
         <!-- Hero footer: will stick at the bottom -->
         <div class="hero-foot">
-          <nav class="tabs">
-            <div class="container">
-            </div>
-          </nav>
-        </div>
-      </section>
-      <br>
-      <hr>
-      <!-- cards/section for map &weather -->
-      <!-- this is placeholder for the tiles -->
-      <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
-              <div class="tile">
+            <nav class="tabs">
+                <div class="container">
                 </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-danger">
-                        <p class="title">Zip Code</p>
-                        <div class="level-item">
-                                <div class="field has-addons">
-                                  <p class="control">
-                                    <input class="input" type="text" placeholder="Find a post">
-                                  </p>
-                                  <p class="control">
-                                    <button class="button">
-                                      Search
-                                    </button>
-                                  </p>
+            </nav>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <!-- cards/section for map &weather -->
+    <!-- this is placeholder for the tiles -->
+    <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+            <div class="tile">
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-danger m-box">
+                    <div class="level-item">
+                        <div class="field has-addons">
+                            <p class="control">
+                            </p>
+                        </div>
+                    </div>
+                    <!-- place holder for map -->
+                    <input id="location" class="placeSearch" type="text" placeholder="Starbucks..."><button
+                        id="userSearch" type="submit">Search</button><br>
+
+                    <button id="currentLocation" type="submit" value="currentLoc">Get Current Location<i
+                            class="fas fa-location-arrow"></i></button>
+                    <button id="directions" type="submit" value="direction">Directions</button>
+                    <div class="flex-stuff">
+                        <div id="map">
+                            <!-- Replace the value of the key parameter with your own API key. -->       
+                        </div>
+                        <div id="right-panel"></div>
+                    </div>
+                    <div id="nearestFound">Closest Location: </div>
+                    <!-- Content -->
+                    <div class="content">
+                    </div>
+                </article>
+            </div>
+        </div> 
+        <div class="tile is-parent ">
+            <article class="tile is-child notification w-box is-success">
+                <div class="content">
+                    <div class=“container”>
+                        <div class=“app-title”>
+                            <!-- <h3>Weather</h3> -->
+                            <!-- <nav class="navbar navbar-default" id="nav_bar"> -->
+                                <div class="container" style="height:95px;">
+                                    <div class="row">
+                                        <div class="col-md-12" style="margin-bottom:10px;">
+                                            <span id="error" class="text-center"></span>
+                                        </div>
+                                        <div class=“littleNav” style="align-content: center">
+                                                <a href=“http://www.openweathermap.org” target=“_blank”> <button class=“btn btn-success”>Weather Origin <i class="fas fa-globe"></i>
+                                                </button></a>
+                                                <a href="./weeklyforecast/forecast.html" target=“_blank”><button class=“btn btn-primary”>Weekly
+                                                    Forcast <i class="fas fa-cloud"></i></button></a>
+                                              </div>
+                                        <div class="row form-group form-inline" id="cityDiv">
+                                            <input type="text" name="city" id="city" 
+                                                class="form-control" placeholder="Your city name..." />
+                                                <!-- <button id="submitCity" class="btn btn-primary"
+                                                class="fa fa-question-circle">Search</button> -->
+
+                                            </div>
+                                    </div>
+                                </nav> 
+                            <div id="showWeather">
+                                <div class="weather-icon">
+                                    <!-- <img id="icon" src="https://media1.giphy.com/media/3ov9jCEFMBtCy54q6Q/giphy.gif"
+                                    alt=""> -->
                                 </div>
-                              </div>
-                              <hr>
-                              <!-- place holder for map -->
-                        <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis pariatur quidem iste ratione eos maiores voluptatem ipsum odio consequatur! Nostrum saepe at laboriosam commodi, error impedit maiores corrupti officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque accusamus magnam commodi ipsum sed similique dolor vitae ducimus reprehenderit blanditiis praesentium unde voluptatibus ad explicabo quas, quibusdam quam consequatur voluptates.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem in perferendis, illum aperiam quibusdam ducimus cumque at ab repellat hic esse amet rerum dolore consectetur. Quam debitis aspernatur fuga nemo.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, eligendi consequatur delectus voluptatibus eveniet ipsum? Maiores expedita repellat soluta incidunt itaque, doloremque voluptate inventore adipisci sit. Magni illo harum aperiam.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore nisi qui officia dolorum possimus dolores non, adipisci provident perspiciatis eligendi et libero illo quibusdam omnis sequi earum tempora? Distinctio, pariatur!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ratione beatae ad sunt dolorum tempora repellat omnis officia. Magnam nam accusamus rerum quasi deleniti beatae delectus illum expedita eaque minima.
-                        <br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit porro voluptatem vitae sed expedita velit optio incidunt accusantium repellendus deleniti quidem, mollitia saepe numquam exercitationem laboriosam quis, eius aliquid!
-                        <hr> 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur autem cupiditate, dolores consectetur eveniet dicta vero aut, eius vel hic, nulla veritatis repellendus quaerat adipisci nostrum laborum placeat mollitia id!
-                        </p>
-                        <!-- Content -->
-                        <div class="content">
+                            </div>
+                            <!-- <div class="footer " style="text-align: center"> -->
+                                <!-- <a href="http://www.openweathermap.org" target="_blank"> <button
+                                    class="btn btn-success">Weather Origin
+                                </button></a>
+                                <a href="../teamp1/Weekly Forecast/forecast.html" target="_blank"><button
+                                    class="btn btn-success">Weekly
+                                        Forcast</button></a> -->
+                                    <!-- </div> -->
+                            <div class="content">
+                                <!-- Content -->
+                            </div>
                         </div>
                     </article>
-                </div>
-            </div>
-        <div class="tile is-parent">
-            <article class="tile is-child notification is-success">
-                <div class="content">
-                    <p class="title">zip code</p>
-              <!-- <p class="subtitle">Wa little wider</p> -->
-              <div class=“container”>
-                    <div class=“app-title”>
-                        <h3>Weather</h3>
-                    </div>
-                    <div class=“notification”></div>
-                    <div class=“weather-container”>
-                        <div class=“weather-icon”>
-                            <img src=“assets/icons/unknown.png” alt=“”>
-                        </div>
-                        <div class=“temperature-value”>
-                            <p>- °<span>C</span></p>
-                        </div>
-                        <div class=“tempature-description”>
-                            <p>-</p>
-                        </div>
-                        <div class=“location”>
-                            <p>-</p>
-                        </div>
-                    </div>
-                </div>
-              <div class="content">
-                  <!-- Content -->
-                </div>
-            </div>
-        </article>
         </div>
     </div>
     <!-- footer -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Name of the project</strong> by <a href="https://jgthms.com">Us</a>. The source code is licensed?
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed? <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-              </p>
-            </div>
-        </footer>
-        
-        <!-- javascript -->
-        <script src="assets/js/Weather.js"></script>
-        <script src="assets/js/map.js"></script>
-    </body>
-    
+                <strong>Weathermaps Vision</strong> by Joe, Sultan and Will.
+            </p>
+        </div>
+    </footer>
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+    <script src="assets/maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxTdbiQM9NRtUgYe3cYN86iuXIleDgb04
+    &libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="assets/js/Weather.js"></script>
+    <script src="assets/js/map.js"></script>
+</body>
 </html>
-
