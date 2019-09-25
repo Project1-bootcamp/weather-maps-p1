@@ -5,7 +5,7 @@ body{
     margin: auto;
     background-image: url('https://gifspro.com/wp-content/uploads/2018/06/Cumulus-Clouds-Timelapse-8-Near-Sunset.gif');
     filter: blur(0);
-    color: whitesmoke;
+    color: rgb(250, 244, 244);
     background-size: cover;
     border: blue;
     width: 400px;

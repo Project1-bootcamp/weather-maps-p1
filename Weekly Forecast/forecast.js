@@ -27,7 +27,6 @@ function getForecast() {
 
                 for (var i = 0; i < data.list.length; i++) {
                     table += "<tr>";
-
                     table += "<td>" + data.list[i].weather[0].main + "</td>";
                     table += "<td><img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png'></td>";
                     table += "<td>" + data.list[i].weather[0].description + "</td>";
@@ -38,6 +37,7 @@ function getForecast() {
                     table += "<td>" + data.list[i].deg + "&deg;</td>";
                     table += "</tr>";
                 }
+
 
                 $("#forecastWeather").html(table);
                 $("#header").html(header);
