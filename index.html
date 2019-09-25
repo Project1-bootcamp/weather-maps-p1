@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/mywebsitefolder/fontawesome/fontawesome-all.css" rel="stylesheet">
+
+
     <title>Document</title>
 </head>
 
@@ -14,10 +18,11 @@
 
     <input id="location" class = "placeSearch" type="text" placeholder="Starbucks..."><button id="userSearch" type="submit">Search</button><br>
 
-    <button id="currentLocation" type="submit" value="currentLoc">Get Current Location</button>
+    <button id="currentLocation" type="submit" value="currentLoc">Get Current Location<i class="fas fa-location-arrow"></i></button>
+    
     <button id="directions" type="submit" value="direction">Directions</button>
 
-    <div id="nearestFound">Closest Location: </div>
+    <div class="flex-stuff">
 
     <div id="map">
         <!-- Replace the value of the key parameter with your own API key. -->
@@ -29,7 +34,9 @@
 
     </div>
     <div id="right-panel"></div>
-
+    </div>
+    <div id="nearestFound">Closest Location: </div>
+        
 </body>
 
 </html>

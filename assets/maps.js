@@ -11,6 +11,8 @@ var searchVal;
 //variable to hold formatted current location(after being geocoded)
 var formattedCurrentLoc = "";
 
+//console.log(closestFound);
+
 //hide directions button until search button is clicked
 $("#directions").hide();
 
@@ -27,10 +29,9 @@ $("#currentLocation").on("click", function () {
 $("#directions").on("click", function () {
 
     initMap();
-
 })
 
-var closestFound = document.getElementById("nearestFound");
+
 
 //on click, search for nearest location of input search term and display the address
 $("#userSearch").on("click", function(){
@@ -40,15 +41,15 @@ $("#userSearch").on("click", function(){
     $("#directions").show();
     $("#nearestFound").show();
     closestFound.textContent = "Closest Location Found: " + formattedAddress;
+    console.log("user: " + closestFound.textContent);
     
 })
 
 //this function calculates the route and displays it on the map as well in the form of a list of directions
 function initMap() {
-    //$("#currentlocation").hide();
+    //$("#currentlocation").hide()
 
     function calculateAndDisplayRoute(directionsService, directionsRenderer) {
-
         //varaible to store current location 
         var currentPosition = {};
 
@@ -57,6 +58,7 @@ function initMap() {
             zoom: 13,
             mapTypeId: 'roadmap'
         });
+
 
         infoWindow = new google.maps.InfoWindow;
 
@@ -95,7 +97,7 @@ function initMap() {
 
         //get origin and end spot for the directions 
 
-        console.log(currentPosition.lat);
+        //console.log(currentPosition.lat);
 
         var start = formattedAddress;
         var end = formattedCurrentLoc;
@@ -113,6 +115,8 @@ function initMap() {
     }
 
     calculateAndDisplayRoute();
+    
+   
 
 }
 
@@ -184,6 +188,7 @@ function testPos(arg) {
     // console.log("postion after switch" + JSON.stringify(yourPosition1));
     console.log("lat " + lat);
     console.log("lng " + lng);
+    var closestFound = document.getElementById("nearestFound");
 
 
     //stores current location based off the lat and long and geocodes it into an address
