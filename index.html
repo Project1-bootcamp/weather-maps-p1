@@ -12,18 +12,23 @@
 
 <body>
 
-    <input id="location" type="text" name="firstname" placeholder="Location"><br>
+    <input id="location" class = "placeSearch" type="text" placeholder="Starbucks..."><button id="userSearch" type="submit">Search</button><br>
 
     <button id="currentLocation" type="submit" value="currentLoc">Get Current Location</button>
+    <button id="directions" type="submit" value="direction">Directions</button>
+
+    <div id="nearestFound">Closest Location: </div>
 
     <div id="map">
         <!-- Replace the value of the key parameter with your own API key. -->
 
-        <script src="assets/placeSearch.js"></script>
+    
+        <script src="assets/maps.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxTdbiQM9NRtUgYe3cYN86iuXIleDgb04
 &libraries=places&callback=initAutocomplete" async defer></script>
 
     </div>
+    <div id="right-panel"></div>
 
 </body>
 

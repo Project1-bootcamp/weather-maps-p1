@@ -1,6 +1,8 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
+      position: fixed;
+      left:3%; 
        height: 500px;
        width: 800px;
         }
@@ -11,6 +13,7 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            background: darkgrey;
         }
 
         #description {
@@ -85,3 +88,60 @@
         #target {
             width: 345px;
         }
+
+        #currentLocation{
+          position: relative;
+          left:20%;
+          bottom: 5%;
+        }
+
+
+#right-panel {
+font-family: 'Roboto','sans-serif';
+line-height: 30px;
+padding-left: 10px;
+}
+
+#right-panel select, #right-panel input {
+font-size: 15px;
+}
+
+#right-panel select {
+width: 100%;
+}
+
+#right-panel i {
+font-size: 12px;
+}
+#right-panel {
+    height: 500px;
+    float: right;
+    width: 350px;
+    overflow: auto;
+    position: relative;
+    bottom: 75%;
+    right:2%;
+}
+
+@media print {
+  #map {
+    height: 500px;
+    margin: 0;
+  }
+  #right-panel {
+    float: none;
+    width: auto;
+  }
+}
+
+#nearestFound{
+  position: relative;
+  left: 40%;
+}
+
+#userSearch{
+  position: relative;
+  left: 35%;
+  top: 49px;
+  z-index: 1;
+}
