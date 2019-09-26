@@ -91,12 +91,17 @@
           border-color: #4d90fe;
       }
 
-      #title {
+      .hero {
           color: #fff;
-          background-color: #4d90fe;
+          background-image: url('https://s28720.pcdn.co/blog/wp-content/uploads/2019/04/life-storage-moving-to-chicago-1920x500.jpg');
+          background-size: cover;
+          background-position: bottom;
+          position: relative;
           font-size: 25px;
           font-weight: 500;
-          padding: 6px 12px;
+          padding: auto;
+          height: 200px;
+          
       }
 
       #target {
@@ -177,3 +182,15 @@ display: flex;
 display: flex;
 /* margin-left:300px */
 }
+#jumbo{
+    padding: -100px;
+    color: white;
+}
+.title{
+    color: whitesmoke;
+    
+}
+/* .tile {
+    background-image: url('https://www.alabamawx.com/wp-content/uploads/2017/03/shutterstock_240459751.jpg');
+    background-size: cover;
+} */
