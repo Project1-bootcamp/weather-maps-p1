@@ -20,16 +20,16 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/mainstyle.css" />
-    <link rel="stylesheet" href="assets/css/weatherstyle.css" />
+    <link rel="stylesheet" href="assets/css/weatherstyle.css">
 </head>
 <body>
-    <section class="hero is-primary is-medium">
+    <section class="hero is- is-medium">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
         </div>
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
-            <div class="container has-text-centered">
+            <div id="jumbo" class="container has-text-centered">
                 <h1 class="title">
                    WeatherMaps Vision
                 </h1>
@@ -83,7 +83,7 @@
             </div>
         </div> 
         <div class="tile is-parent ">
-            <article class="tile is-child notification w-box is-success">
+            <article  class="tile is-child notification w-box is-sucess">
                 <div class="content">
                     <div class=“container”>
                         <div class=“app-title”>
@@ -95,14 +95,14 @@
                                             <span id="error" class="text-center"></span>
                                         </div>
                                         <div class=“littleNav” style="align-content: center">
-                                                <a href=“http://www.openweathermap.org” target=“_blank”> <button class=“btn btn-success”>Weather Origin <i class="fas fa-globe"></i>
+                                            <a href="http://www.openweathermap.org" target="_blank"> <button class="button is-success">Weather Origin <i class="fas fa-globe"></i>
                                                 </button></a>
-                                                <a href="./weeklyforecast/forecast.html" target=“_blank”><button class=“btn btn-primary”>Weekly
+                                                <a href="./weeklyforecast/forecast.html" target=“_blank”><button class="button is-info">Weekly
                                                     Forcast <i class="fas fa-cloud"></i></button></a>
                                               </div>
                                         <div class="row form-group form-inline" id="cityDiv">
-                                            <input type="text" name="city" id="city" 
-                                                class="form-control" placeholder="Your city name..." />
+                                            <p type="text" name="city" id="city" 
+                                                class="form-control" placeholder="" />
                                                 <!-- <button id="submitCity" class="btn btn-primary"
                                                 class="fa fa-question-circle">Search</button> -->
 
